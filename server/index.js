@@ -44,7 +44,7 @@ async function start () {
 start()
 
 
-app.post("https://spartanui-dailydose.herokuapp.com/GetRandom", (req, res) => {
+app.post("/GetRandom", (req, res) => {
   
   var list;
  

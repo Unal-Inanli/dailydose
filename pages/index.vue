@@ -52,7 +52,7 @@ export default {
       var i = 0;
       this.$store.state.list = [];
       while(i < amount) {
-        axios.post('https://spartanui-dailydose.herokuapp.com/GetRandom').then((response) => {
+        axios.post('/GetRandom').then((response) => {
         this.$store.commit("showPost", { 
         author: `u/${response.data.list.author}`,
         title: response.data.list.title,
