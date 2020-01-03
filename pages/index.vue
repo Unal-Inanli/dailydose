@@ -61,7 +61,11 @@ export default {
         image: this.checkImage(response.data.list.thumbnail),
         text: this.shortenText(response.data.list.selftext),
         });
-    }).finally(i++);
+    })
+    .catch((error) => {
+      console.log(error);
+    })
+    .finally(i++);
         if(i == amount) {
        this.loading = false;
       }

@@ -52,6 +52,8 @@ app.post("/GetRandom", (req, res) => {
     list = response;
     console.log(list);
     res.send({list: list});
+  }).catch((error) => {
+    res.send(error)
   }); 
 
 });
