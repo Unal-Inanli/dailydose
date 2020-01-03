@@ -52,7 +52,7 @@ export default {
       var i = 0;
       this.$store.state.list = [];
       while(i < amount) {
-        axios.post('/GetRandom').then((response) => {
+        axios.post('0.0.0.0:3000/GetRandom').then((response) => {
           console.log(response);      
         this.$store.commit("showPost", { 
         author: `u/${response.data.list.author}`,
