@@ -48,7 +48,7 @@ app.post("/GetRandom", (req, res) => {
   
   var list;
  
-  r.getRandomSubmission().then((response) => {
+  r.getRandomSubmission('gifs').then((response) => {
     list = response;
     console.log(list);
     res.send({list: list});
