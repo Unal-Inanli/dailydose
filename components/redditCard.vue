@@ -1,8 +1,7 @@
  <template>
   <a :href="PostLink" target="_blank" class="redditCards">
     <div class="redditCard__postDetails">
-      <span>Posted by {{Author}}</span>
-      <span>on {{Subreddit}}</span>
+      <span>Posted by {{Author}} on {{Subreddit}}</span>
     </div>
     <div class="redditCard__image-container">
       <img :src="Image" alt />

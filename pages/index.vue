@@ -33,7 +33,7 @@
         </div>
         <div v-if="isLoading === false" class="pt-10">
           <span
-            class="cursor-pointer p-3 bg-orange-400 font-bold text-white"
+            class="cursor-pointer p-3 bg-orange-400 rounded-full font-bold text-white"
             @click="getPosts(10)"
           >Get Posts</span>
         </div>
@@ -60,13 +60,20 @@ export default {
       return this.$store.state.list;
     }
   },
+
+  head() {
+    return {
+      title: this.title, 
+    }
+  },
   data: function() {
     return {
       isLoading: false,
       compsLoaded: 0,
       amount: 10,
       circles: [],
-      subNames: []
+      subNames: [],
+      title: "DailyDose"
     };
   },
 
