@@ -17,10 +17,10 @@
       </div>
       <div class="flex flex-col items-center justify-center mt-5 mb-5">
         <div class="mt-16" v-if="isLoading === false">
-          <div class="flex flex-row flex-wrap">
+          <div class="flex flex-row flex-wrap justify-center">
+            <div style="width: 320px;" class="flex justify-center mb-6" v-for="(post, index) in posts"
+              :key="index">
             <redditCard
-              v-for="(post, index) in posts"
-              :key="index"
               v-bind:Author="post.author"
               v-bind:Title="post.title"
               v-bind:Image="post.image"
@@ -28,13 +28,14 @@
               v-bind:PostLink="post.postLink"
               v-bind:Text="post.text"
             ></redditCard>
+            </div>
           </div>
         </div>
         <div v-if="isLoading === false" class="pt-10">
           <span
             class="cursor-pointer p-3 bg-orange-400 font-bold text-white"
             @click="getPosts(10)"
-          >Get Post</span>
+          >Get Posts</span>
         </div>
       </div>
     </div>

@@ -31,8 +31,6 @@ export default {
   align-items: center;
   border-radius: 16px;
   box-shadow: 9px 9px 15px 0 gray, -9px -9px 15px 0 white;
-  margin-right: 1rem;
-  margin-bottom: 2rem;
 }
 
 .redditCard__postDetails {
